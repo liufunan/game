@@ -1,0 +1,97 @@
+*{
+   margin: 0;
+    padding: 0;
+}
+.container{                   /*设置整个框，以图片为背景*/
+    width: 320px;
+    height: 480px;
+    background: url("../images/game_bg.jpg") no-repeat 0 0;
+    /*背景图片不平铺，从0,0的地方开始显示*/
+    margin: 80px auto;
+    position: relative;
+}
+.container>h1{               /* 设置得分 */
+    color: white;
+    margin-left: 60px;
+}
+.container .progress{       /* 设置时间进度条 */
+    width: 180px;
+    height: 16px;
+    background: url("../images/progress.png") no-repeat 0 0;  /* 进度条为图片 */
+    position: absolute;
+    top: 66px;
+    left: 63px;
+}
+.container .start{          /* 设置按钮 */
+    width: 150px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(#cc6834,red);     /* 渐变 */
+    border-radius: 20px;
+    border: none;            /* 去掉默认边框 */
+    font-size: 20px;
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    margin-left: -75px;
+}
+.container .rules{
+    width: 100%;
+    height: 20px;
+    background: #CCCCCC;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.container .rule{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);     /*  设置整个的蒙版，透明度为0.5  */
+    position: absolute;              /*  不让其他元素来影响排放  */
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;                  /*  默认为不显示  */
+}
+.rule>p{
+    line-height: 50px;
+    color: white;
+}
+.rule>a{
+    color: red;
+}
+.container .mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);     /*  设置整个的蒙版，透明度为0.5  */
+    position: absolute;              /*  不让其他元素来影响排放  */
+    left: 0;
+    top: 0;
+    padding-top: 200px;           /*  里面的内容向下了  */
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
+}
+.mask h1{
+    color: orangered;
+    text-shadow: 3px 3px 0 white;       /*  给文字设置一下阴影  */
+    font-size: 40px;
+}
+.mask>button{
+    width: 150px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(skyblue,deepskyblue);     /* 渐变 */
+    border-radius: 20px;
+    border: none;            /* 去掉默认边框 */
+    font-size: 20px;
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    margin-left: -75px;
+}
